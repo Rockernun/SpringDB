@@ -15,10 +15,7 @@ import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.transaction.PlatformTransactionManager;
 import springdb.jdbc.domain.Member;
-import springdb.jdbc.repository.MemberRepository;
-import springdb.jdbc.repository.MemberRepositoryV3;
-import springdb.jdbc.repository.MemberRepositoryV4_1;
-import springdb.jdbc.repository.MemberRepositoryV4_2;
+import springdb.jdbc.repository.*;
 
 import javax.sql.DataSource;
 import java.sql.SQLException;
@@ -58,7 +55,7 @@ class MemberServiceV4Test {
 
         @Bean
         MemberRepository memberRepository() {
-            return new MemberRepositoryV4_2(dataSource);
+            return new MemberRepositoryV5(dataSource);
         }
 
         @Bean
