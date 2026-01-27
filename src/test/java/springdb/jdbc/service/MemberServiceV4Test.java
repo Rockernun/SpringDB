@@ -18,6 +18,7 @@ import springdb.jdbc.domain.Member;
 import springdb.jdbc.repository.MemberRepository;
 import springdb.jdbc.repository.MemberRepositoryV3;
 import springdb.jdbc.repository.MemberRepositoryV4_1;
+import springdb.jdbc.repository.MemberRepositoryV4_2;
 
 import javax.sql.DataSource;
 import java.sql.SQLException;
@@ -57,7 +58,7 @@ class MemberServiceV4Test {
 
         @Bean
         MemberRepository memberRepository() {
-            return new MemberRepositoryV4_1(dataSource);
+            return new MemberRepositoryV4_2(dataSource);
         }
 
         @Bean
